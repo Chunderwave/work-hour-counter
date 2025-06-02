@@ -4,6 +4,7 @@ const pauseBtn = document.querySelector("#pauseBtn");
 const endBtn = document.querySelector("#endBtn");
 const startDT = document.querySelector("#startDateT");
 const endDT = document.querySelector("#endDateT");
+const resultDisplay = document.querySelector("#resultDisplay");
 
 let startTime = 0;
 let elapsedTime = 0;
@@ -25,21 +26,6 @@ const options = {
     second: 'numeric',
     timeZone: 'America/New_York' // Specify Eastern Time
 };
-
-function initDB(){
-    db.openDB('Work Hour Counter', {
-        ver:1,
-        multimember:true
-    }).then(({database})=>{
-        return database.createObjectStore('sessionData', {
-            keyPath: 'sessionId',
-            autoIncrement: true
-        })
-    }).then(objectStore=>{
-        db = objectStore
-    })
-}
-initDB();
 
 startBtn.addEventListener("click", ()=>{
     if(isPause && !resumed){
@@ -77,6 +63,7 @@ endBtn.addEventListener("click", ()=>{
     const endDTString = `End Date & Time: ${new Date(EndTime)
     .toLocaleString(undefined,options)}`;
     endDT.textContent = endDTString;
+    displayInHourMinSec(elapsedTime,resultDisplay,'Elapsed Time of This Session: ')
 
     addSessionData(elapsedTime,InitialTime,EndTime);
 
@@ -86,7 +73,8 @@ endBtn.addEventListener("click", ()=>{
     hrs = 0;
     mins = 0;
     secs = 0;
-    timeDisplay.textContent = "00:00:00"
+    pauseBtn.textContent = "Pause";
+    timeDisplay.textContent = "00:00:00";
 })
 
 function updateTime(){
@@ -95,7 +83,10 @@ function updateTime(){
     }else{
         elapsedTime = Date.now()-startTime;
     }
-    
+    displayInHourMinSec(elapsedTime,timeDisplay);
+}
+
+function displayInHourMinSec(elapsedTime, target, customizedMes=''){
     secs = Math.floor((elapsedTime/1000) %60);
     mins = Math.floor((elapsedTime/(1000*60))%60);
     hrs = Math.floor(elapsedTime/(1000*60*60));
@@ -103,7 +94,7 @@ function updateTime(){
     secs = pad(secs)
     mins = pad(mins)
     hrs = pad(hrs)
-    timeDisplay.textContent = `${hrs}:${mins}:${secs}`;
+    target.textContent = `${customizedMes}${hrs}:${mins}:${secs}`;
 
     function pad(unit){
         return (('0')+unit).length > 2? unit:('0')+unit 
