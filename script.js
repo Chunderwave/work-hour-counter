@@ -27,11 +27,69 @@ const options = {
     timeZone: 'America/New_York' // Specify Eastern Time
 };
 
+class Session{
+    constructor(elapsedTime, sessionStart){
+        const dateObj = new Date(sessionStart)
+        this.id = dateObj.toISOString()
+        this.elapsedTime = elapsedTime;
+        this.date = this.id.split('T')[0]
+    }
+}
+
+//create database
+const versionNum = 1; //this must be int positive
+const databaseName = "WorkHourCounterDB";
+const storeName = "sessions";
+
+function openDB(modificationToDB){
+    const dbPromise = indexedDB.open(databaseName,versionNum);
+    let db;
+    
+    dbPromise.onupgradeneeded = (event)=>{
+        db = event.target.result;
+    
+        if(!db.objectStoreNames.contain(storeName)){
+            // id should be existing field
+            // id is unique because it is the time and date of the session
+            const store = db.createObjectStore(storeName, {keyPath: "id"});
+        
+            // Create an index on startTimestamp so we can query by date easily later.
+            store.createIndex("byDate", "date", { unique: false });
+        }
+    }
+    
+    dbPromise.onerror = function(event) {
+        console.error("IndexedDB open error:", event.target.error);
+    };
+      
+    dbPromise.onsuccess = function(event) {
+        //event is an instance of indexedDB database
+        console.log("Database opened successfully");
+        db = event.target.result;
+
+        modificationToDB(db);
+    
+        db.onerror = (event)=>{
+            //generic error handler for all database errors 
+            console.error(`Database error: ${event.target.error?.message}.`)
+        }
+    }; 
+}
+
+function addSessiontoDB(elapsedTime, sessionStart){
+    function modificationToDB(database){
+        const obj = new Session(elapsedTime,sessionStart);
+
+    }
+}
+
+let sessionStart;
 startBtn.addEventListener("click", ()=>{
     if(isPause && !resumed){
         isPause = false;
         startTime = Date.now();
         InitialTime = startTime;
+        sessionStart = startTime;
         const startDTString = `Start Date & Time: ${new 
         Date(InitialTime).toLocaleString(undefined,options)}`;
         startDT.textContent = startDTString;
@@ -65,7 +123,7 @@ endBtn.addEventListener("click", ()=>{
     endDT.textContent = endDTString;
     displayInHourMinSec(elapsedTime,resultDisplay,'Elapsed Time of This Session: ')
 
-    addSessionData(elapsedTime,InitialTime,EndTime);
+    addSessiontoDB(elapsedTime,sessionStart);
 
     startTime = 0;
     elapsedTime = 0;
@@ -99,8 +157,4 @@ function displayInHourMinSec(elapsedTime, target, customizedMes=''){
     function pad(unit){
         return (('0')+unit).length > 2? unit:('0')+unit 
     }
-}
-
-function addSessionData(elapsedTime, InitialTime,EndTime){
-
 }
