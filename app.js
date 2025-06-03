@@ -48,7 +48,7 @@ function openDB(modificationToDB){
     dbPromise.onupgradeneeded = (event)=>{
         db = event.target.result;
     
-        if(!db.objectStoreNames.contain(storeName)){
+        if(!db.objectStoreNames.contains(storeName)){
             // id should be existing field
             // id is unique because it is the time and date of the session
             const store = db.createObjectStore(storeName, {keyPath: "id"});
@@ -76,11 +76,26 @@ function openDB(modificationToDB){
     }; 
 }
 
-function addSessiontoDB(elapsedTime, sessionStart){
-    function modificationToDB(database){
+function addSessionToDB(elapsedTime, sessionStart){
+    function modificationToDB(db){
         const obj = new Session(elapsedTime,sessionStart);
 
+        const tx = db.transaction([storeName], "readwrite")
+        const store = tx.objectStore(storeName)
+
+        const addReq = store.add(obj);
+
+        addReq.onsuccess = ()=>{
+            console.log(`Session saved: ${obj}`);
+        }
+        addReq.onerror = (event)=>{
+            console.error(`Error saving session: ${event.target.error}`)
+        }
+        tx.oncomplete = ()=>{
+            db.close();
+        }
     }
+    openDB(modificationToDB);
 }
 
 let sessionStart;
@@ -123,7 +138,7 @@ endBtn.addEventListener("click", ()=>{
     endDT.textContent = endDTString;
     displayInHourMinSec(elapsedTime,resultDisplay,'Elapsed Time of This Session: ')
 
-    addSessiontoDB(elapsedTime,sessionStart);
+    addSessionToDB(elapsedTime,sessionStart);
 
     startTime = 0;
     elapsedTime = 0;
