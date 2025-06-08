@@ -93,6 +93,8 @@ startBtn.addEventListener("click", ()=>{
         const startDTString = `Start Date & Time: ${new 
         Date(InitialTime).toLocaleString(undefined,options)}`;
         startDT.textContent = startDTString;
+        endDT.textContent = "End Date & Time: ";
+        resultDisplay.textContent = "Elapsed Time of This Session: ";
         IntervalID = setInterval(updateTime, 100);
     }
 })
@@ -123,7 +125,7 @@ endBtn.addEventListener("click", ()=>{
     endDT.textContent = endDTString;
     displayInHourMinSec(elapsedTime,resultDisplay,'Elapsed Time of This Session: ')
 
-    addSessiontoDB(elapsedTime,sessionStart);
+    // addSessiontoDB(elapsedTime,sessionStart);
 
     startTime = 0;
     elapsedTime = 0;
