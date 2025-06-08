@@ -1,0 +1,187 @@
+[
+    {
+        "_id": "683ed1b015d22ded7454ca9c",
+        "index": 1,
+        "guid": "2d0bb50f-310c-45fa-8dec-4a1c06242dce",
+        "isActive": true,
+        "balance": "$1,570.75",
+        "picture": "http://placehold.it/32x32",
+        "age": 24,
+        "eyeColor": "blue",
+        "name": "Dixie Snyder",
+        "gender": "female",
+        "tags": [
+            "duis",
+            "officia",
+            "ullamco",
+            "cupidatat",
+            "nostrud",
+            "incididunt",
+            "nisi"
+        ],
+        "friends": [
+            {
+                "id": 0,
+                "name": "Rosemary Cain"
+            },
+            {
+                "id": 1,
+                "name": "Evangeline Nash"
+            },
+            {
+                "id": 2,
+                "name": "Araceli Hooper"
+            }
+        ],
+        "greeting": "Hello, Dixie Snyder! You have 10 unread messages.",
+        "favoriteFruit": "banana"
+    },
+    {
+        "_id": "683ed1b0591e1e87b3128cd4",
+        "index": 2,
+        "guid": "d15cbc43-c0b7-4c3e-80df-bfb038e65d69",
+        "isActive": true,
+        "balance": "$1,630.50",
+        "picture": "http://placehold.it/32x32",
+        "age": 21,
+        "eyeColor": "brown",
+        "name": "Peggy Sharp",
+        "gender": "female",
+        "tags": [
+            "aliqua",
+            "Lorem",
+            "consequat",
+            "do",
+            "aliquip",
+            "nulla",
+            "veniam"
+        ],
+        "friends": [
+            {
+                "id": 0,
+                "name": "Alexandria Bryan"
+            },
+            {
+                "id": 1,
+                "name": "Violet Oneill"
+            },
+            {
+                "id": 2,
+                "name": "Annette Gutierrez"
+            }
+        ],
+        "greeting": "Hello, Peggy Sharp! You have 5 unread messages.",
+        "favoriteFruit": "banana"
+    },
+    {
+        "_id": "683ed1b0818291eceaad66f2",
+        "index": 4,
+        "guid": "d86d48d4-9e89-4d4d-839a-714ac0aeb972",
+        "isActive": true,
+        "balance": "$2,748.92",
+        "picture": "http://placehold.it/32x32",
+        "age": 29,
+        "eyeColor": "brown",
+        "name": "Wade Ramirez",
+        "gender": "male",
+        "tags": [
+            "esse",
+            "cupidatat",
+            "ipsum",
+            "duis",
+            "sit",
+            "reprehenderit",
+            "officia"
+        ],
+        "friends": [
+            {
+                "id": 0,
+                "name": "Wendy Witt"
+            },
+            {
+                "id": 1,
+                "name": "Mullen Reynolds"
+            },
+            {
+                "id": 2,
+                "name": "Millie Gates"
+            }
+        ],
+        "greeting": "Hello, Wade Ramirez! You have 8 unread messages.",
+        "favoriteFruit": "banana"
+    },
+    {
+        "_id": "683ed1b023ea4ae918ff236c",
+        "index": 5,
+        "guid": "0dd3766c-62eb-4a75-9e07-5d04c67c347c",
+        "isActive": true,
+        "balance": "$3,224.20",
+        "picture": "http://placehold.it/32x32",
+        "age": 21,
+        "eyeColor": "brown",
+        "name": "Espinoza Forbes",
+        "gender": "male",
+        "tags": [
+            "mollit",
+            "sit",
+            "consequat",
+            "officia",
+            "ipsum",
+            "exercitation",
+            "sint"
+        ],
+        "friends": [
+            {
+                "id": 0,
+                "name": "Kent Leach"
+            },
+            {
+                "id": 1,
+                "name": "Hattie Dorsey"
+            },
+            {
+                "id": 2,
+                "name": "Louise Walters"
+            }
+        ],
+        "greeting": "Hello, Espinoza Forbes! You have 9 unread messages.",
+        "favoriteFruit": "apple"
+    },
+    {
+        "_id": "683ed1b0c2ec2f081142226d",
+        "index": 6,
+        "guid": "e1d818b0-0945-4b59-b97d-7eeb6b34deaf",
+        "isActive": true,
+        "balance": "$2,395.75",
+        "picture": "http://placehold.it/32x32",
+        "age": 33,
+        "eyeColor": "blue",
+        "name": "Kirsten Cooke",
+        "gender": "female",
+        "tags": [
+            "fugiat",
+            "anim",
+            "dolor",
+            "veniam",
+            "sit",
+            "elit",
+            "tempor"
+        ],
+        "friends": [
+            {
+                "id": 0,
+                "name": "Velasquez Michael"
+            },
+            {
+                "id": 1,
+                "name": "Lori Sweeney"
+            },
+            {
+                "id": 2,
+                "name": "Maynard Duffy"
+            }
+        ],
+        "greeting": "Hello, Kirsten Cooke! You have 10 unread messages.",
+        "favoriteFruit": "apple"
+    }
+]

@@ -1,0 +1,194 @@
+[
+    {
+      "_id": "683eebc1a75e98c6b37ceae4",
+      "index": 0,
+      "guid": "7ca6a895-f07e-4ef2-b54a-a6470bc44b76",
+      "isActive": true,
+      "balance": "$3,197.75",
+      "picture": "http://placehold.it/32x32",
+      "age": 26,
+      "eyeColor": "brown",
+      "name": "Stevens Ortiz",
+      "gender": "male",
+      "company": "SPLINX",
+      "email": "stevensortiz@splinx.com",
+      "phone": "+1 (935) 515-3856",
+      "date": "2022-12-31",
+      "friends": [
+        {
+          "id": 0,
+          "name": "Marie Workman"
+        },
+        {
+          "id": 1,
+          "name": "Ora Petty"
+        },
+        {
+          "id": 2,
+          "name": "Barton Oneal"
+        }
+      ],
+      "greeting": "Hello, Stevens Ortiz! You have 2 unread messages.",
+      "favoriteFruit": "strawberry"
+    },
+    {
+      "_id": "683eebc16a908e209fa1b776",
+      "index": 1,
+      "guid": "1eb8482c-9541-4b51-845a-c0da8d6bc35d",
+      "isActive": true,
+      "balance": "$1,735.77",
+      "picture": "http://placehold.it/32x32",
+      "age": 25,
+      "eyeColor": "blue",
+      "name": "Marsha Haney",
+      "gender": "female",
+      "company": "GOKO",
+      "email": "marshahaney@goko.com",
+      "phone": "+1 (862) 414-2609",
+      "date": "2025-05-02",
+      "friends": [
+        {
+          "id": 0,
+          "name": "Slater David"
+        },
+        {
+          "id": 1,
+          "name": "John Steele"
+        },
+        {
+          "id": 2,
+          "name": "Maldonado Dalton"
+        }
+      ],
+      "greeting": "Hello, Marsha Haney! You have 5 unread messages.",
+      "favoriteFruit": "strawberry"
+    },
+    {
+      "_id": "683eebc101b333ee7da8913b",
+      "index": 2,
+      "guid": "902fa4af-4bcf-446f-87ee-8cab22a59290",
+      "isActive": true,
+      "balance": "$1,928.08",
+      "picture": "http://placehold.it/32x32",
+      "age": 24,
+      "eyeColor": "brown",
+      "name": "Gilliam Carrillo",
+      "gender": "male",
+      "company": "COMFIRM",
+      "email": "gilliamcarrillo@comfirm.com",
+      "phone": "+1 (977) 589-3545",
+      "date": "2020-12-28",
+      "friends": [
+        {
+          "id": 0,
+          "name": "Hoover Small"
+        },
+        {
+          "id": 1,
+          "name": "Acevedo Lyons"
+        },
+        {
+          "id": 2,
+          "name": "Harrell Church"
+        }
+      ],
+      "greeting": "Hello, Gilliam Carrillo! You have 3 unread messages.",
+      "favoriteFruit": "apple"
+    },
+    {
+      "_id": "683eebc1bae5de4b9f0f4ba5",
+      "index": 3,
+      "guid": "ac8f51e9-7e24-47a5-ab9b-beffcd2cca1e",
+      "isActive": false,
+      "balance": "$3,770.76",
+      "picture": "http://placehold.it/32x32",
+      "age": 37,
+      "eyeColor": "brown",
+      "name": "Hollie Malone",
+      "gender": "female",
+      "company": "BUZZNESS",
+      "email": "holliemalone@buzzness.com",
+      "phone": "+1 (996) 435-2827",
+      "date": "2020-01-21",
+      "friends": [
+        {
+          "id": 0,
+          "name": "Nadine Vasquez"
+        },
+        {
+          "id": 1,
+          "name": "Barrett House"
+        },
+        {
+          "id": 2,
+          "name": "Ila Skinner"
+        }
+      ],
+      "greeting": "Hello, Hollie Malone! You have 6 unread messages.",
+      "favoriteFruit": "strawberry"
+    },
+    {
+      "_id": "683eebc1417b9e172e48bf08",
+      "index": 4,
+      "guid": "45c9bcad-dea5-414d-aa0d-db06e417fbdd",
+      "isActive": true,
+      "balance": "$2,281.67",
+      "picture": "http://placehold.it/32x32",
+      "age": 39,
+      "eyeColor": "brown",
+      "name": "Raymond Perez",
+      "gender": "male",
+      "company": "ORBALIX",
+      "email": "raymondperez@orbalix.com",
+      "phone": "+1 (897) 479-3600",
+      "date": "2025-03-13",
+      "friends": [
+        {
+          "id": 0,
+          "name": "Faye Cruz"
+        },
+        {
+          "id": 1,
+          "name": "Lee Silva"
+        },
+        {
+          "id": 2,
+          "name": "Blackburn Montoya"
+        }
+      ],
+      "greeting": "Hello, Raymond Perez! You have 2 unread messages.",
+      "favoriteFruit": "banana"
+    },
+    {
+      "_id": "683eebc10cd02e9f1a2287cb",
+      "index": 5,
+      "guid": "74ff2d39-2c32-4271-b456-ed99b1f6dceb",
+      "isActive": true,
+      "balance": "$1,231.26",
+      "picture": "http://placehold.it/32x32",
+      "age": 36,
+      "eyeColor": "blue",
+      "name": "Crawford Burch",
+      "gender": "male",
+      "company": "VIAGRAND",
+      "email": "crawfordburch@viagrand.com",
+      "phone": "+1 (927) 471-2166",
+      "date": "2023-06-28",
+      "friends": [
+        {
+          "id": 0,
+          "name": "Morgan Luna"
+        },
+        {
+          "id": 1,
+          "name": "Sellers Byrd"
+        },
+        {
+          "id": 2,
+          "name": "Beach Larsen"
+        }
+      ],
+      "greeting": "Hello, Crawford Burch! You have 9 unread messages.",
+      "favoriteFruit": "apple"
+    }
+  ]
