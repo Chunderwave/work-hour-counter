@@ -76,11 +76,43 @@ function openDB(modificationToDB){
     }; 
 }
 
-function addSessiontoDB(elapsedTime, sessionStart){
-    function modificationToDB(database){
+function addtoDB(elapsedTime, sessionStart){
+    function modificationToDB(db){
         const obj = new Session(elapsedTime,sessionStart);
 
+        const tx = db.transaction([storeName], "readwrite")
+        const store = tx.objectStore(storeName);
+
+        const addReq = store.add(obj);
+
+        addReq.onsuccess = ()=>{
+            console.log("A session has been added successfully.")
+        }
+        addReq.onerror = (event)=>{
+            console.error(`Add session request encounters error: ${event.error}`)
+        }
+
+        tx.oncomplete = ()=>{db.close()}
     }
+    openDB(modificationToDB)
+}
+
+function clearDataInDB(){
+    function clearAll(db){
+        const tx = db.transaction([storeName], "readonly")
+        const store = tx.objectStore(storeName);
+        const clearReq = store.clear();
+
+        clearReq.onsuccess = ()=>console.log("All sessions have been clear.")
+        clearReq.onerror = (event)=>console.error(`Clear sessions encounters error: ${event.error}`)
+        tx.oncomplete = ()=>db.close()
+    }
+    openDB(clearAll)
+}
+
+//needs to be in YYYYMMDD
+function getHoursPWeek(date){
+    
 }
 
 let sessionStart;
