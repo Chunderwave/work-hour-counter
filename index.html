@@ -14,21 +14,36 @@
         <button id="pauseBtn" class = "sessionBtn">Pause</button>
         <button id="endBtn" class = "sessionBtn">End</button>
     </div>
-    <div id="dateT">
-        <div id="startDateT" class = "dateTgroup">Start Date & Time: </div>
-        <div id="endDateT" class = "dateTgroup">End Date & Time: </div>
-        <div id="resultDisplay" class = "dateTgroup"> Elapsed Time of This Session: </div>
-        <label for="targetDate" class = "dateTgroup">Enter a date you want to query the hours for that week: </label>
-        <input
-            type="text"
-            id="targetDate"
-            name="targetDate"
-            required
-            minlength="10"
-            maxlength="10"
-            size="10" 
-            placeholder="yyyy-mm-dd"
-        />
+    <div id="date">
+        <div id="dateT">
+            <div id="startDateT" class = "dateTgroup">Start Date & Time: </div>
+            <div id="endDateT" class = "dateTgroup">End Date & Time: </div>
+            <div id="resultDisplay" class = "dateTgroup"> Elapsed Time of This Session: </div>
+        </div>
+        <div id="dateTBtn">
+            <button id = "addBtn" class = "dateTBtn">Add Session</button>
+            <!-- <button id = "discardBtn" class = "dateTBtn">Discard Session</button> -->
+        </div>
+    </div>
+    <div id="QueryHours">
+        <div id="queryClass">
+            <label for="targetDate" class = "query">Enter a date you want to query the hours for that week: </label>
+            <input
+                type="text"
+                class = "query"
+                id="targetDate"
+                name="targetDate"
+                required
+                minlength="10"
+                maxlength="10"
+                size="10" 
+                placeholder="yyyy-mm-dd"
+            />
+        </div>
+        <div id="resultArea">
+            <button id="resultBtn">Display Result</button>
+            <span id="resultText">← Result will appear here</span>
+        </div>
     </div>
 </body>
 <script src = "script.js"></script>

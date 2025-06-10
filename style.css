@@ -30,7 +30,63 @@
 
 .dateTgroup{
     margin-top: 30px;
-    margin-bottom: 30px;
     font-size: larger;
     font-family:'Courier New', Courier, monospace;
+    margin-right: 30px;
+    width:20cm;
+    height:25px;
+    border: 3px solid;
+    border-radius: 12px;
+    border-color: aliceblue;
+
+}
+.dateTBtn{
+    width: 200px;
+    height: 50px;
+    border: 3px;
+    border-radius: 12px;
+    font-size: larger;
+    font-family:'Courier New', Courier, monospace;
+    cursor:pointer;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-right:30px;
+}
+
+.query{
+    margin-top: 30px;
+    font-size: larger;
+    font-family:'Courier New', Courier, monospace;
+    margin-bottom: 30px;
+}
+
+
+#date{
+    display:flex;
+}
+#resultArea{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    gap: 10px; /*space between button and text*/
+}
+
+#resultText {
+    display:block;
+    font-size: 14px;
+    color: #333;
+    font-size: larger;
+    font-family:'Courier New', Courier, monospace;
+    margin-left: 10px;
+    white-space: pre-line;
+}
+#resultBtn{
+    width: 200px;
+    height: 50px;
+    border: 3px;
+    border-radius: 12px;
+    font-size: larger;
+    font-family:'Courier New', Courier, monospace;
+    cursor:pointer;
+    margin-right:30px;
 }

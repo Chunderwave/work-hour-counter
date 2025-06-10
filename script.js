@@ -77,7 +77,7 @@ function openDB(modificationToDB) {
 }
 
 function addtoDB(elapsedTime, sessionStart) {
-    function modificationToDB(db) {
+    function addData(db) {
         const obj = new Session(elapsedTime, sessionStart);
 
         const tx = db.transaction([storeName], "readwrite")
@@ -94,7 +94,7 @@ function addtoDB(elapsedTime, sessionStart) {
 
         tx.oncomplete = () => { db.close() }
     }
-    openDB(modificationToDB)
+    openDB(addData)
 }
 
 function clearDataInDB() {
